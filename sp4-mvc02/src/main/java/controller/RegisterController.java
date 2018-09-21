@@ -27,6 +27,7 @@ public class RegisterController {
 		if(!agree) {
 			return "register/step1";
 		}
+		model.addAttribute("registerRequest", new RegisterRequest());
 		return "register/step2";
 	}
 	@RequestMapping("register/step3")
@@ -38,8 +39,8 @@ public class RegisterController {
 			return "register/step2";
 		}
 	}
-	@RequestMapping("/main")
+/*	@RequestMapping("/main")
 		public String main() {
 		return "main";
-	}
+	}*/
 }
