@@ -26,7 +26,7 @@
 		</p>
 		<p>
 			<label>비밀번호 확인 : <br />
-				<input type="text" name="password1" id="password1" />
+				<input type="text" name="confirmPassword" id="confirmPassword" />
 			</label>
 		</p>
 		<input type="submit" value="가입 완료">

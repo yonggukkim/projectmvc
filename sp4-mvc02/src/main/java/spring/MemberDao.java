@@ -27,7 +27,7 @@ public class MemberDao {
 	}
 	public Member selectByEmail(String email) {
 		String sql = 
-				"select * from MEMBER where EMAIL = ?";
+				"select * from MEMBER2 where EMAIL = ?";
 		List<Member> results =
 				jdbcTemplate.query(sql,
 						new MemberRowMapper() ,email);
@@ -36,7 +36,7 @@ public class MemberDao {
 	}
 	public void insert(final Member member) {
 		jdbcTemplate.update(new PreparedStatementCreator(){	
-			String sql ="insert into Member(id,email,password,"
+			String sql ="insert into Member2(id,email,password,"
 					+ "name, regdate) "
 					+ " values(?,?,?,?,?)";
 			public PreparedStatement 
@@ -59,14 +59,14 @@ public class MemberDao {
 	}
 	public void update(Member member) {
 		//TODO 구현해야함
-		String sql = "update member set name=?, password=? "
+		String sql = "update member2 set name=?, password=? "
 				+ " where email=?";
 		jdbcTemplate.update(sql,member.getName(),
 				member.getPassword(),
 				member.getEmail());
 	}
 	public Collection<Member> selectAll() {
-		String sql = "select * from member";
+		String sql = "select * from member2";
 		List<Member> results = 
 				jdbcTemplate.query(sql,new MemberRowMapper());
 		//TODO 구현해야함
@@ -74,7 +74,7 @@ public class MemberDao {
 	}
 	public int count() {
 		//TODO 구현해야함
-		String sql="select count(*) from member";
+		String sql="select count(*) from member2";
 		Integer count = jdbcTemplate.queryForObject(sql, 
 				Integer.class);
 		return (Integer) count;
