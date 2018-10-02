@@ -20,4 +20,11 @@
 	</property>
 	<property name="defaultEncoding" value="utf-8" />
 </bean>
+
+<mvc:interceptors>
+	<mvc:interceptor>
+		<mvc:mapping path="/edit/**"/>
+		<bean class="interceptor.AuthCheckInterceptor" />
+	</mvc:interceptor>
+</mvc:interceptors>
 </beans>

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -32,7 +33,19 @@ public class MemberDao {
 				jdbcTemplate.query(sql,
 						new MemberRowMapper() ,email);
 		return results.isEmpty()? null: results.get(0);
-				
+	}
+	public Member selectById(Long id) {
+		String sql = 
+				"select * from MEMBER2 where ID = ?";
+		List<Member> results =
+				jdbcTemplate.query(sql,
+						new MemberRowMapper() , id);
+		return results.isEmpty()? null: results.get(0);
+	}
+	public List<Member> selectByRegisterDate(Date from, Date to) {
+		String sql = "select * from member2 where regdate between ? and ? order by regdate desc";
+		List<Member> results = jdbcTemplate.query(sql, new MemberRowMapper(), from, to);
+		return results;
 	}
 	public void insert(final Member member) {
 		jdbcTemplate.update(new PreparedStatementCreator(){	

@@ -16,4 +16,8 @@
 <bean class="spring.MemberListPrinter" id="listPrinter" />
 <bean class="spring.MemberInfoPrinter" id="infoPrinter" />
 <bean class="spring.MemberRegisterService" id="regSvc" />
+<bean class="spring.MemberListService" id="memberListService" />
+<bean class="spring.AuthService" id="authService" />
+<!-- <bean class="spring.ChangePasswordService" id="changePasswordService" /> -->
+<bean class="spring.MemberDetailService" id="memberDetailService" />
 </beans>
