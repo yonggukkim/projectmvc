@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.ChangePwdCommand;
+import exception.IdPasswordNotMatchingException;
+import service.ChangePasswordService;
 import spring.AuthInfo;
-import spring.ChangePasswordService;
-import spring.IdPasswordNotMatchingException;
+import validator.ChangePwdCommandValidator;
 
 @Controller
 @RequestMapping("/edit/changePassword")

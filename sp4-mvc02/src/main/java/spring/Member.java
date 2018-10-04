@@ -2,6 +2,8 @@ package spring;
 
 import java.util.Date;
 
+import exception.IdPasswordNotMatchingException;
+
 public class Member {
 	private Long id;
 	private String email;

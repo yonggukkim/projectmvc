@@ -1,4 +1,4 @@
-package controller;
+package command;
 
 // 로그인 정보를 저장하기 위한 command객체로 사용하기 위한 클래스
 public class LoginCommand {

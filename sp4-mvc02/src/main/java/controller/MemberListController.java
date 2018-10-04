@@ -9,8 +9,9 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import command.ListCommand;
+import service.MemberListService;
 import spring.Member;
-import spring.MemberListService;
 @Controller
 public class MemberListController {
 	private MemberListService memberListService;

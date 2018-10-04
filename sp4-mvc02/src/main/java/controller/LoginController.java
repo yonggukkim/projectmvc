@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.LoginCommand;
+import exception.IdPasswordNotMatchingException;
+import service.AuthService;
 import spring.AuthInfo;
-import spring.AuthService;
-import spring.IdPasswordNotMatchingException;
+import validator.LoginCommandValidator;
 
 @Controller
 @RequestMapping("/login")

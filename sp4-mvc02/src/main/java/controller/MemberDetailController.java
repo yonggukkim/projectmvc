@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import exception.MemberNotFoundException;
+import service.MemberDetailService;
 import spring.Member;
-import spring.MemberDetailService;
-import spring.MemberNotFoundException;
 
 @Controller
 public class MemberDetailController {
