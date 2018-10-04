@@ -20,4 +20,24 @@
 <bean class="service.AuthService" id="authService" />
 <!-- <bean class="spring.ChangePasswordService" id="changePasswordService" /> -->
 <bean class="service.MemberDetailService" id="memberDetailService" />
+<bean class="service.ReportService" id="reportService" />
+<bean class="org.springframework.mail.javamail.javaMailSenderImpl" id="mailSender">
+	<property name="host" value="smtp.gmail.com" />
+	<property name="port" value="587" />
+	<property name="defalutEncoding" value="utf-8" />
+	<property name="username" value="kook7749@gmail.com" />
+	<property name="password" value="!Rladydrnr2" />
+	<property name="javaMailProperties"><!-- 권한과 보안 정책 -->
+		<props>
+			<prop key="mail.smtp.starttls.enable">true</prop>
+			<prop key="mail.smtp.auth">true</prop>
+			<prop key="mail.smtps.ssl.checkserveridentity">true</prop>
+			<prop key="mail.smtp.debug">true</prop>
+			<prop key="mail.smtps.ssl.trust">*</prop>
+		</props>
+	</property>
+</bean>
+<bean id="emailSenter" class="spring.EmailSender">
+	<!-- <property name="mailSender" value="mailSender"></property> -->
+</bean>
 </beans>

@@ -19,4 +19,7 @@
 <!-- 	<property name="memberListService" ref="memberListService"></property> -->
 </bean>
 <bean class="controller.MemberDetailController" />
+<bean class="controller.ReportSubmissionController" />
+<bean class="controller.ReportSubmissionController1" />
+<bean class="controller.EmailController" />
 </beans>

@@ -11,6 +11,7 @@
 <mvc:view-resolvers>
 	<mvc:jsp prefix="/WEB-INF/view/" /><!-- 이걸 적지 않으면 Controller를 return 할 때 확장자와 주소를 적지 않아도 된다. -->
 </mvc:view-resolvers>
+<mvc:resources location="/WEB-INF/view/" mapping="/**" cache-period="31556926" /> <!-- 파일 업로드 지정해 주는 것.. -->
 <!-- <mvc:view-controller path="/main" view-name="main" /> spring-controoler에서 사용?-->
 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 	<property name="basenames">
@@ -20,7 +21,10 @@
 	</property>
 	<property name="defaultEncoding" value="utf-8" />
 </bean>
-
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+	<property name="maxUploadSize" value="100000000" />
+	<property name="maxInMemorySize" value="100000000" />	
+</bean>
 <mvc:interceptors>
 	<mvc:interceptor>
 		<mvc:mapping path="/edit/**"/>

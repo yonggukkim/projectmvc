@@ -92,6 +92,25 @@ public class MemberDao {
 				Integer.class);
 		return (Integer) count;
 	}
+	String sql;
+	public int fileInsert(BoaderFile boaderFile) {
+		sql = "insert into boaderfile(write_num, filesize, original_file, stored_file_name) values(?,?,?,?)";
+		int i = jdbcTemplate.update(sql, boaderFile.getWriteNum(), boaderFile.getFilesize(), boaderFile.getOriginalFile(), boaderFile.getStoredFileName());
+		return i;
+		/*public void fileInsert(final BoaderFile boaderFile) {
+		  sql = "insert into boaderfile(write_num, filesize, original_file, stored_file_name) values(?,?,?,?)";
+		  jdbcTemplate.update(new PreparedStatementCreator() {
+				public PreparedStatement createPreparedStatement(Connection con) throws SQLException{
+					PreparedStatement pstmt = con.prepareStatement(sql);
+					pstmt.setString(1, boaderFile.getWriteNum());
+					pstmt.setLong(2, boaderFile.getFilesize());
+					pstmt.setString(3, boaderFile.getOriginalFile());
+					pstmt.setString(4, boaderFile.getStoredFileName());
+					return pstmt;
+				}
+			}
+		);*/
+	}
 }
 
 class MemberRowMapper implements RowMapper<Member> {

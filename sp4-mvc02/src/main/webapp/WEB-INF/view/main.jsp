@@ -15,6 +15,8 @@
 		[로그인하기]</a>
 		<p><a href="<c:url value='/register/step1' />">
 		[회원 가입하기]</a>
+		<p><a href="<c:url value='/report/submission1' />">
+		[파일 업로드]</a>
 	</p>
 	</c:if>
 	<c:if test="${!empty authInfo}">

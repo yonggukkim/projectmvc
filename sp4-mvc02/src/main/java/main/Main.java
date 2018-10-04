@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import spring.AlreadyExistingMemberException;
-import spring.ChangePasswordService;
-import spring.MemberInfoPrinter;
-import spring.MemberListPrinter;
-import spring.MemberNotFoundException;
-import spring.MemberRegisterService;
+import exception.AlreadyExistingMemberException;
+import exception.MemberNotFoundException;
+import service.ChangePasswordService;
+import service.MemberInfoPrinter;
+import service.MemberListPrinter;
+import service.MemberRegisterService;
 import spring.RegisterRequest;
 
 public class Main {
