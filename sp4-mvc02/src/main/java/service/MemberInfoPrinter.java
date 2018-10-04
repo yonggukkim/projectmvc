@@ -1,7 +1,10 @@
-package spring;
+package service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+
+import spring.Member;
+import spring.MemberDao;
+import spring.MemberPrinter;
 
 public class MemberInfoPrinter {
 	// 의존객체

@@ -1,8 +1,10 @@
-package controller;
+package validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
+
+import command.ChangePwdCommand;
 
 // 오류검사하기 위해서는 Validator 인터페이스를 상속 받는다.
 public class ChangePwdCommandValidator implements Validator{

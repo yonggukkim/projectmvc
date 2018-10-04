@@ -1,9 +1,14 @@
-package spring;
+package service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import exception.AlreadyExistingMemberException;
+import spring.Member;
+import spring.MemberDao;
+import spring.RegisterRequest;
 
 public class MemberRegisterService {
 	private MemberDao memberDao;//의존객체

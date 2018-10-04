@@ -1,11 +1,12 @@
-package spring;
+package service;
 
 import java.util.Collection;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+
+import spring.Member;
+import spring.MemberDao;
+import spring.MemberPrinter;
 
 public class MemberListPrinter {
 	private MemberDao memberDao;

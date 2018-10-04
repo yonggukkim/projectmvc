@@ -1,6 +1,11 @@
-package spring;
+package service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import exception.IdPasswordNotMatchingException;
+import spring.AuthInfo;
+import spring.Member;
+import spring.MemberDao;
 
 public class AuthService {
 	private MemberDao memberDao;

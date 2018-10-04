@@ -1,9 +1,12 @@
-package spring;
+package service;
 
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import spring.Member;
+import spring.MemberDao;
 
 public class MemberListService {
 	private MemberDao memberDao;

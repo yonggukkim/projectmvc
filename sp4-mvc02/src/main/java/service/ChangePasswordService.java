@@ -1,6 +1,10 @@
-package spring;
+package service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import exception.MemberNotFoundException;
+import spring.Member;
+import spring.MemberDao;
 
 public class ChangePasswordService {
 	private MemberDao memberDao; //의존객체
